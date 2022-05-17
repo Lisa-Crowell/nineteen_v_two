@@ -4,8 +4,6 @@ from .models import IdeaModel
 from .forms import IdeaForm
 from django.http import HttpResponse
 
-# Create your views here.
-
 
 """
 1. table as a homepage
