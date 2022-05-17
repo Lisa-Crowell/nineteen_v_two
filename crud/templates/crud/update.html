@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+        <input
+                class="update_button"
+                id="update"
+                type="submit"
+                value="Update">
+        <button
+                class="cancel_update_button"
+                id="cancel">
+            <a href="/">Cancel Update</a></button>
+    </form>
+{% endblock %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'crud/update.css' %}">
+{% endblock %}

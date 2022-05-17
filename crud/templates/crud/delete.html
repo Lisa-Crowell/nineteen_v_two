@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="main">
+    <form action="" method="POST">
+        {% csrf_token %}
+        Delete Idea?
+        <input type='submit' class="input" value="Delete" />
+        <button class="delete_button" id="cancel">Cancel</button>
+    </form>
+</div>
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'crud/delete.css' %}">
+{% endblock %}
+{% endblock %}

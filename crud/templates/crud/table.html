@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'crud/table.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h1>This is the table's page</h1>
+        <section>
+            <div class="heading">
+                <span>Idea</span>
+                <span>Content</span>
+                <span>Author</span>
+                <span>Date Created</span>
+            </div>
+            {% for data in dataset %}
+                <div class="info">
+                    <span class="title">{{ data.idea_title }}</span>
+                    <span class="content">{{ data.idea_description }}</span>
+                    <span class="author">{{ data.idea_author }}</span>
+                    <a href="update/{{ data.id }}" class="button">Update</a>
+                    <a href="delete/{{ data.id }}" class="delete-button">Delete</a>
+{#                    <li class="nav-item {{ create_page }}">#}
+{#                        <a class="nav-link" href="{% url 'create' %}">Create Idea</a>#}
+{#                    </li>#}
+                </div>
+            {% endfor %}
+        </section>
+    </div>
+{% endblock %}

@@ -1,0 +1,129 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: darkcyan;
+}
+
+.body {
+    display: block;
+    background-color: lightgray;
+    max-width: 70rem;
+    min-width: 70rem;
+    border: solid black 2px;
+    padding: 0 0 0 0;
+    text-wrap: normal;
+    overflow: hidden;
+}
+
+.heading_idea {
+    display: inline-block;
+    border-collapse: collapse;
+    padding-right: 6rem;
+    margin-left: 3rem;
+}
+
+.heading_content {
+    display: inline-block;
+    border-collapse: collapse;
+    padding-right: 31rem;
+}
+
+.heading_author {
+    display: inline-block;
+    padding-right: 5rem;
+    contain: layout;
+}
+
+.title {
+    display: inline-block;
+    max-width: 8rem;
+    min-width:  8rem;
+    margin-left: 0.25rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.content {
+    box-sizing: content-box;
+    display: inline-block;
+    max-width: 35rem;
+    min-width: 35rem;
+    text-align: left;
+    overflow: hidden;
+    color: #e32636;
+    margin-top: .5rem;
+}
+
+.author {
+    display: inline-block;
+    max-width: 10rem;
+    min-width: 10rem;
+    text-align: center;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: x-large;
+    overflow: hidden;
+}
+/* Custom Button Styling */
+.button {
+    background-color: mediumseagreen;
+    border-radius: 7px;
+    border: black solid 1px;
+    text-decoration: none;
+    color: white;
+    padding: .25rem;
+    box-shadow: .2rem .3rem dimgrey;
+    display: inline-block;
+}
+
+.button:hover{
+    background-color: lightseagreen;
+    outline: lightcyan 2rem;
+    box-shadow: .25rem .3rem rgba(99, 99, 99, .6);
+}
+
+.button:active {
+    box-shadow: .1rem .15rem dimgrey;
+    transform: translateY(0.2rem);
+}
+
+.delete-button {
+    background-color: darkred;
+    border-radius: 7px;
+    border: black solid 1px;
+    text-decoration: none;
+    color: white;
+    padding: .25rem;
+    box-shadow: .2rem .3rem dimgrey;
+    display: inline-block;
+}
+
+.delete-button:hover{
+    background-color: lightpink;
+    outline: lightcyan 2rem;
+    box-shadow: .25rem .3rem rgba(99, 99, 99, .6);
+}
+
+.delete-button:active {
+    box-shadow: .1rem .15rem dimgrey;
+    transform: translateY(0.2rem);
+}
+
+/* End Custom Button Styling */
+
+.info {
+    border-bottom: black solid 1px;
+    height: 5rem;
+}
+
+.heading {
+    border-bottom: black solid 1px;
+}
+
+.buttons {
+    display: inline-block;
+}

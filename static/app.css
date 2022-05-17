@@ -1,0 +1,10 @@
+.nav-item {
+        Padding:10px;
+        margin:5px;
+        display:flex;
+        text-decoration: none;
+}
+title {
+        text-align: center;
+        font-family: monospace;
+}

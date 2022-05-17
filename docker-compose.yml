@@ -1,0 +1,27 @@
+version: '3'
+services:
+  ideas:
+    image: nineteen:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/code
+    depends_on:
+      - idea-db
+    restart: on-failure
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+  idea-db:
+    image: mariadb:latest
+    ports:
+      - "3306:3306"
+    command: --init-file /data/init.sql
+    volumes:
+      - ./data/init.sql:/data/init.sql
+    environment:
+      MARIADB_ROOT_USER: ${MARIADB_ROOT_USER}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}

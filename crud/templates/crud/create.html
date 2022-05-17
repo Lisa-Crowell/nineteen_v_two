@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'crud/create.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 class="heading">Enter Ideas Here: </h1>
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="Idea__idea_form--as_p">
+        {{ form.as_p }}
+    </div>
+    <input class="button" id="button" type="submit" value="Submit">
+</form>
+{% endblock %}
